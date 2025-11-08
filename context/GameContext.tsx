@@ -31,7 +31,10 @@ export const GameProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
       if (savedPet) {
         const parsedPet: Pet = JSON.parse(savedPet);
         setPet(parsedPet);
-        setGameState(parsedPet.status === 'ETERNAL' ? 'PLAYING' : 'SELECTING'); // Will be updated by game logic hook
+        // If a pet is loaded, we should be in the 'PLAYING' state.
+        // The useGameLogic hook will then determine if the state should be
+        // changed to END_OF_LIFE or GAMEOVER based on the pet's data.
+        setGameState('PLAYING');
         if(savedHistory) {
             setChatHistory(JSON.parse(savedHistory));
         }

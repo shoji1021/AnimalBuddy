@@ -1,0 +1,8 @@
+
+{
+  "name": "Zodiac Partner AI",
+  "description": "Choose a zodiac animal to be your AI partner. Raise, talk to, and play with your virtual pet powered by Gemini. Your partner learns and grows with you over time, but remember to take care of it!",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
